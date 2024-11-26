@@ -1,0 +1,75 @@
+.card {
+  background-color: #000000;
+  border: 1px solid #000000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 450px;
+  border-radius: 0;
+  position: relative;
+  }
+
+  .card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 399px); 
+    background: linear-gradient(to top, #000000, rgb(234, 240, 240)); 
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 400px; 
+    object-fit: cover;
+  }
+  
+  .card-content {
+    position: relative;
+    z-index: 2; 
+    padding: 15px;
+  }
+  
+  .card-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #0000009e;
+  }
+  
+  .card-price {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .card .card-button {
+    all: unset;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #ffffffc3;
+    background: linear-gradient(to bottom, rgba(136, 136, 136, 0) 50%, #00000000 100%); 
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    border-radius: 8px; 
+  }
+  
+  .card .card-button:hover {
+    transform: scale(1.05); 
+    background: linear-gradient(to bottom, #000000, #787878);
+  }
+
+  

@@ -1,0 +1,43 @@
+.extra-cards-container {
+    display: flex;
+    justify-content: space-around; 
+    gap: 30px; 
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1400px;
+    background-color: #000; 
+  }
+  
+  .extra-card {
+    background-color: transparent; 
+    text-align: center;
+    overflow: hidden;
+    width: 500px; 
+    height: 700px;
+  }
+  
+  .extra-card-image {
+    width: 100%;
+    height: 80%;
+    object-fit: cover; 
+  }
+  
+  .extra-card-content {
+    background-color: transparent;
+    padding: 5px 0;
+  }
+  
+  .extra-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .extra-card-subtitle {
+    font-size: 1rem;
+    color: #888;
+    margin-top: 2px; 
+  }
+  
