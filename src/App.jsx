@@ -6,8 +6,8 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import ExtraCards from "./components/ExtraCards/ExtraCards";
 
-const bannerImageTop = "../../assets/img/banners/banner.jpg";
-const bannerImageBottom = "../../assets/img/banner/footer1.jpg";
+const bannerImageTop = "/Entrega-Fernandez/assets/img/banner/banner.jpg";
+const bannerImageBottom = "/Entrega-Fernandez/assets/img/banner/footer1.jpg";
 
 const App = () => {
   return (
