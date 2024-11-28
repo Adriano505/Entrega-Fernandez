@@ -1,7 +1,7 @@
-import forumLow from "../assets/img/championes/forum-low-cL.jpg";
-import gazelleGris from "../assets/img/championes/gazelle-gris.jpg";
-import gazelleIndoor from "../assets/img/championes/gazelle-indoor.jpg";
-import superstar from "../assets/img/championes/superstar.jpg";
+import forumLow from "/assets/img/championes/forum-low-cL.jpg";
+import gazelleGris from "/assets/img/championes/gazelle-gris.jpg";
+import gazelleIndoor from "/assets/img/championes/gazelle-indoor.jpg";
+import superstar from "/assets/img/championes/superstar.jpg";
 
 const products = [
   { id: 1, image: forumLow, name: "Championes Forum Low CL", price: 5990, category: "men" },

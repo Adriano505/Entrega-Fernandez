@@ -2,10 +2,10 @@ import React from "react";
 import "./ExtraCards.css";
 import Card from "../Card/Card"; 
 
-import iconosDelMomento from "../../assets/img/banner/iconos.jpg";
-import adizerp from "../../assets/img/banner/adizero.jpg";
-import gazelle from "../../assets/img/banner/gazelle.jpg";
-import adicolor from "../../assets/img/banner/adicolor.jpg";
+import iconosDelMomento from "/assets/img/banner/iconos.jpg";
+import adizerp from "/assets/img/banner/adizero.jpg";
+import gazelle from "/assets/img/banner/gazelle.jpg";
+import adicolor from "/assets/img/banner/adicolor.jpg";
 
 const ExtraCards = () => {
   return (
