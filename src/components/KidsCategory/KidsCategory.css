@@ -1,0 +1,129 @@
+.kids-category-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+.kids-banner {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.kids-banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenedor principal */
+.main-content {
+    display: flex;
+}
+
+/* Opciones desplegables */
+.filter-options-kids {
+    width: 20%;
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.filter-title-kids {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.filter-group-kids {
+    margin-bottom: 15px;
+}
+
+.filter-button-kids {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.filter-button-kids:hover {
+    background-color: #555;
+}
+
+.dropdown-menu-kids {
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #000;
+}
+
+.dropdown-menu-kids li {
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.dropdown-menu-kids li:hover {
+    background-color: #444;
+}
+
+/* Sección de productos */
+.products-section-kids {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.products-grid-kids {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 4 columnas */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo de las cards */
+.product-card-kids {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.product-card-kids:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.product-card-kids img {
+    width: 100%;
+    height: auto; /* Ajusta la altura de las imágenes */
+    aspect-ratio: 4 / 2;
+    object-fit: cover;
+}
+
+.product-card-content-kids {
+    padding: 10px;
+    text-align: center;
+}
+
+.product-card-title-kids {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.product-card-price-kids {
+    font-size: 0.9rem;
+    color: #aaa;
+}

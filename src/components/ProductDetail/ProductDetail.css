@@ -1,0 +1,93 @@
+/* Contenedor principal */
+.product-detail-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Imagen del producto */
+  .product-detail-left {
+    flex: 1;
+  }
+  
+  .product-detail-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Detalles del producto */
+  .product-detail-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .product-detail-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .product-detail-price {
+    font-size: 1.5rem;
+    color: #ff5722;
+    margin-bottom: 20px;
+  }
+  
+  /* Selección de talles */
+  .product-detail-sizes {
+    margin-bottom: 20px;
+  }
+  
+  .size-label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .product-size-options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .product-size-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .product-size-button:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+  }
+  
+  .product-size-selected {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+  }
+  
+  /* Botón de compra */
+  .product-detail-buy-button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .product-detail-buy-button:hover {
+    background-color: #e64a19;
+  }
+  

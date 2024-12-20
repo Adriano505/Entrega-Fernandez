@@ -1,26 +1,30 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom"; 
+import { useParams, useNavigate } from "react-router-dom";
 import { getProducts, getProductsByCategory } from "../../data/products";
-import { useCart } from "../../context/CartContext"; 
+import { useCart } from "../../context/CartContext";
 import "./ItemListContainer.css";
 
 const ItemListContainer = ({ greeting }) => {
-  const { categoryId } = useParams(); 
-  const navigate = useNavigate(); 
-  const { addToCart } = useCart();
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { categoryId } = useParams(); // Obtiene el ID de la categoría desde la URL
+  const navigate = useNavigate(); // Para redirigir al usuario
+  const { addToCart } = useCart(); // Contexto del carrito
+  const [products, setProducts] = useState([]); // Estado de productos
+  const [loading, setLoading] = useState(true); // Estado de carga
+  const [error, setError] = useState(null); // Estado de errores
 
   useEffect(() => {
     setLoading(true);
     setError(null);
 
-    const fetchData = categoryId ? getProductsByCategory(categoryId) : getProducts();
+    const fetchData = categoryId
+      ? getProductsByCategory(categoryId) // Muestra productos por categoría
+      : getProducts(); // Página principal muestra todos los productos
 
     fetchData
       .then((data) => {
-        setProducts(data);
+        // Si no hay categoría, mostramos solo 4 productos en la página principal
+        const filteredProducts = categoryId ? data : data.slice(0, 4);
+        setProducts(filteredProducts);
         setLoading(false);
       })
       .catch(() => {
@@ -46,7 +50,7 @@ const ItemListContainer = ({ greeting }) => {
             <div
               key={product.id}
               className="card"
-              onClick={() => navigate(`/product/${product.id}`)} 
+              onClick={() => navigate(`/product/${product.id}`)} // Redirige al detalle del producto
             >
               <img src={product.image} alt={product.name} className="card-image" />
               <div className="card-content">
@@ -55,8 +59,8 @@ const ItemListContainer = ({ greeting }) => {
                 <button
                   className="card-button"
                   onClick={(e) => {
-                    e.stopPropagation(); 
-                    addToCart(product);
+                    e.stopPropagation(); // Evita que se active la navegación al detalle
+                    addToCart(product); // Agrega al carrito
                   }}
                 >
                   Comprar

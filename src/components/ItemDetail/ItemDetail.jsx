@@ -16,14 +16,14 @@ const ItemDetail = ({ product }) => {
   useEffect(() => {
     getProducts()
       .then((products) => {
-        setRecommendedProducts(products); 
+        setRecommendedProducts(products.filter((item) => item.id !== product.id)); // Excluir el producto actual
         setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching products:", error);
-        setLoading(false); 
+        setLoading(false);
       });
-  }, []);
+  }, [product.id]);
 
   return (
     <div className="item-detail">
@@ -37,7 +37,7 @@ const ItemDetail = ({ product }) => {
         <p className="product-price">UYU {product.price}</p>
 
         <p className="product-gender">
-          <strong>Género:</strong> {product.category === "women" ? "Mujer" : "Hombre"}
+          <strong>Género:</strong> {product.characteristics.gender || "N/A"}
         </p>
 
         <div className="product-sizes">
@@ -63,10 +63,9 @@ const ItemDetail = ({ product }) => {
 
         <div className="product-characteristics">
           <p><strong>CARACTERÍSTICAS</strong></p>
-          <p>Color: Blanco</p>
-          <p>Género: Mujer</p>
-          <p>Edad: Adulto</p>
-          <p>Tipo: Bajas</p>
+          <p>Color: {product.characteristics.color || "N/A"}</p>
+          <p>Género: {product.characteristics.gender || "N/A"}</p>
+          <p>Tipo: {product.characteristics.type || "N/A"}</p>
         </div>
 
         <hr className="section-divider" />
@@ -74,9 +73,7 @@ const ItemDetail = ({ product }) => {
           <h2 className="description-title">Descripción</h2>
           <hr className="description-divider" />
           <p className="description-text">
-            Una zapatilla que nunca ha pasado de moda. La adidas Grand Court lleva imponiendo su estilo desde los años 70.
-            Una vez decidas apostar por este clásico atemporal, no querrás ponerte otra cosa.
-            Las 3 bandas aportan un toque deportivo a cualquier look.
+            {product.description || "No hay descripción disponible para este producto."}
           </p>
         </div>
 

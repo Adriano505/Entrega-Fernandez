@@ -8,15 +8,18 @@
 
 .item-detail-left {
   flex: 1;
-  max-width: 40%; 
+  max-width: 50%; /* Aumenté el ancho máximo para permitir que la imagen sea más grande */
+  display: flex; 
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
 }
 
 .main-image {
-  width: 130%;
-  height: auto;
-  object-fit: cover; 
-  margin-top: 10px;
-  margin-left: 20px;
+  width: 100%; /* La imagen ocupa todo el contenedor disponible */
+  max-width: 400px; /* Tamaño máximo */
+  height: auto; /* Mantén la proporción */
+  object-fit: contain; /* Ajusta el contenido sin distorsión */
+  margin: 0; /* Eliminé márgenes innecesarios */
 }
 
 .item-detail-right {
@@ -29,19 +32,16 @@
 
 .product-title {
   font-size: 2.5rem;
-  margin-bottom: -10px;
+  margin-bottom: 10px;
   color: #ffffff;
   text-align: left;
-  margin-left: 195px;
 }
 
 .product-price {
   font-size: 1.6rem;
   color: #ffffff;
   text-align: left; 
-  margin-bottom: 5px;
-  margin-top: -10px;
-  margin-left: 200px;
+  margin-bottom: 10px;
 }
 
 .product-code {
@@ -49,20 +49,16 @@
   color: #ffffff;
   text-align: left; 
   margin-top: 5px;
-  margin-left: 200px;
 }
 
 .product-gender {
   font-size: 1rem;
   color: #ffffff;
   margin-bottom: 10px;
-  margin-top: 80px;
-  margin-left: 200px;
 }
 
 .product-sizes {
   margin-top: 15px;
-  margin-left: 200px;
 }
 
 .size-label {
@@ -70,15 +66,12 @@
   margin-bottom: 10px;
   color: #fff3f3;
   text-align: left;
-  margin-top: -20px;
-  margin-left: 0px;
 }
 
 .size-options {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  margin-left: 40px; 
+  gap: 10px;
 }
 
 .size-button {
@@ -108,10 +101,10 @@
   padding: 10px 15px;
   font-size: 1rem;
   cursor: pointer;
-  width: 500px;
+  width: 100%; /* Ajusta el botón al ancho del contenedor */
+  max-width: 300px; /* Tamaño máximo del botón */
   text-align: center;
   margin-top: 10px;
-  margin-left: 200px;
 }
 
 .buy-button:hover {
@@ -125,20 +118,16 @@
   text-align: left;
   border-top: 1px solid #ccc;
   padding-top: 20px; 
-  margin-left: 200px;
 }
 
 .product-characteristics {
-  margin-top: -10px; 
+  margin-top: 10px; 
   font-size: 1rem;
   color: #ffffff;
-  text-align: left;
-
 }
 
 .product-characteristics p {
   margin: 3px 0; 
-  margin-left: 200px;
 }
 
 .product-description {
@@ -162,13 +151,11 @@
 }
 
 .section-divider {
-  width: 200%; 
+  width: 100%; 
   height: 1px; 
   background-color: #000; 
   margin: 40px auto;
   border: none;
-  margin-left: -600px; 
-  margin-bottom: -50px;
 }
 
 .description-text {
@@ -177,14 +164,11 @@
   color: #ffffff; 
   margin: 0 auto;
   max-width: 600px;
-  margin-top: 0px; 
 }
+
 .product-recommendations {
   margin-top: 40px;
-  margin-left: 500px;
   text-align: left; 
-  margin-left: 0;
-  padding-left: 0;
   width: 100%;
 }
 
@@ -202,8 +186,6 @@
   gap: 20px; 
   overflow-x: auto; 
   justify-content: flex-start; 
-  align-items: flex-start; 
-  padding-left: 0;
 }
 
 .recommendation-item {

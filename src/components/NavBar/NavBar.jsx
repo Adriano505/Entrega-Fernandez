@@ -15,9 +15,21 @@ const NavBar = () => {
     <nav className="navbar">
       <Link to="/" className="navbar-brand">Adidas</Link>
       <ul className="navbar-links">
-        <li><Link to="/category/men">Hombres</Link></li>
-        <li><Link to="/category/women">Mujeres</Link></li>
-        <li><Link to="/category/kids">Niños</Link></li>
+        <li>
+          <Link to="/category/men" className="navbar-link">
+            Hombres
+          </Link>
+        </li>
+        <li>
+          <Link to="/category/women" className="navbar-link">
+            Mujeres
+          </Link>
+        </li>
+        <li>
+          <Link to="/category/kids" className="navbar-link">
+            Niños
+          </Link>
+        </li>
       </ul>
       <div className="cart-container" onClick={toggleCart}>
         <CartWidget />
